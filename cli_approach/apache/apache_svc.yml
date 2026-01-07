@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: apache-service
+  name: merc-service
 spec:
   selector:
-    app: apache
+    app: merc
   ports:
   - port: 80
     targetPort: 80
