@@ -6,15 +6,15 @@ spec:
   replicas: 8
   selector:
     matchLabels:
-      app: mercedes
+      app: apache
   template:
     metadata:
       labels:
-        app: mercedes
+        app: apache
     spec:
       containers:
       - name: mercedes
-        image: piyushdev0325/online_shop_mercedes:latest
+        image: httpd:2.4
         ports:
         - containerPort: 80
         resources:
