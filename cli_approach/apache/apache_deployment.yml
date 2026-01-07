@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: merc
+  name: apache
 spec:
   replicas: 8
   selector:
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: merc
-        image: piyushdev0325/online_shop_mercedes:latest
+        image: httpd:2.4
         ports:
         - containerPort: 80
         resources:
