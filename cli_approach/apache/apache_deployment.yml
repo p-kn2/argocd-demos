@@ -3,18 +3,18 @@ kind: Deployment
 metadata:
   name: apache
 spec:
-  replicas: 4
+  replicas: 8
   selector:
     matchLabels:
-      app: apache
+      app: mercedes
   template:
     metadata:
       labels:
-        app: apache
+        app: mercedes
     spec:
       containers:
-      - name: apache
-        image: httpd:2.4
+      - name: mercedes
+        image: piyushdev0325/online_shop_mercedes:latest
         ports:
         - containerPort: 80
         resources:
