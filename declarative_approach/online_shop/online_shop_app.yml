@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: online-shop-app
-  namespace: argobranch
+  namespace: default
 spec:
   project: default
   source:
