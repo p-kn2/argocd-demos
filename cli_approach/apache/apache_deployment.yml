@@ -3,20 +3,20 @@ kind: Deployment
 metadata:
   name: apache
 spec:
-  replicas: 3
+  replicas: 4
   selector:
     matchLabels:
-      app: merc
+      app: apache
   template:
     metadata:
       labels:
-        app: merc
+        app: apache
     spec:
       containers:
-      - name: merc
-        image: piyushdev0325/online_shop_mercedes:latest
+      - name: apache
+        image: httpd:2.4
         ports:
-        - containerPort: 3000
+        - containerPort: 80
         resources:
           requests:
             memory: "64Mi"
@@ -24,4 +24,3 @@ spec:
           limits:
             memory: "128Mi"
             cpu: "500m"
-
