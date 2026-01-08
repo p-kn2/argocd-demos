@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: mercedes-service
+  name: apache-service
 spec:
   selector:
-    app: mercedes
+    app: apache
   ports:
-  - port: 3000
-    targetPort: 3000
+  - port: 80
+    targetPort: 80
