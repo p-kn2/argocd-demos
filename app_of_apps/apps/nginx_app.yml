@@ -4,7 +4,7 @@ metadata:
   name: nginx-child              # Child app name
   namespace: argocd
 spec:
-  project: default
+  project: testp
   source:
     repoURL: https://github.com/p-kn2/argocd-demos.git # Repo containing child apps(that you have forked and cloned earlier)
     targetRevision: tempbranch
