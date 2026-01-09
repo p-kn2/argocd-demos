@@ -12,7 +12,4 @@ spec:
   destination:
     server: https://192.168.64.8:33893 # Replace with your Cluster Url, To get run: `argocd cluster list`
     namespace: ab           # Deploys into default namespace
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
+  syncPolicy: {}
