@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: chai-app
 spec:
-  replicas: 2
+  replicas: 5
   selector:
     matchLabels:
       app: chai-app
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: chai-app
-        image: httpd:2.4
+        image: amitabhdevops/chai-devops:v1.0.0
         ports:
         - containerPort: 80
         env:
