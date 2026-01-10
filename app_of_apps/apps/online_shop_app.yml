@@ -2,9 +2,9 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: online-shop-child        # Child app name
-  namespace: argocd
+  namespace: ab
 spec:
-  project: default
+  project: tezproj
   source:
     repoURL: https://github.com/p-kn2/argocd-demos.git # Repo containing child apps(that you have forked and cloned earlier)
     targetRevision: tempbranch
