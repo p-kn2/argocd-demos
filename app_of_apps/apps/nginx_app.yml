@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: nginx-child              # Child app name
-  namespace: nsa
+  namespace: argocd
 spec:
   project: myproj
   source:
