@@ -2,16 +2,16 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: apache-child             # Child app name
-  namespace: argocd
+  namespace: nsa
 spec:
-  project: tezproj
+  project: myproj
   source:
     repoURL: https://github.com/p-kn2/argocd-demos.git # Repo containing child apps(that you have forked and cloned earlier)
     targetRevision: tempbranch
     path: cli_approach/apache    # path of Apache app in `argocd-demos` repo
   destination:
     server: https://192.168.64.8:33893 # Replace with your Cluster Url, To get run: `argocd cluster list`
-    namespace: ab
+    namespace: nsa1
   syncPolicy:
     automated:
       prune: true
