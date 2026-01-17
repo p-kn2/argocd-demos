@@ -2,16 +2,16 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: nginx-child              # Child app name
-  namespace: argocd
+  namespace: nsa
 spec:
-  project: tezproj
+  project: myproj
   source:
     repoURL: https://github.com/p-kn2/argocd-demos.git # Repo containing child apps(that you have forked and cloned earlier)
     targetRevision: tempbranch
     path: ui_approach/nginx      # path of Nginx app in `argocd-demos` repo
   destination:
     server: https://192.168.64.8:33893 # Replace with your Cluster Url, To get run: `argocd cluster list`
-    namespace: ab           # Deploys into default namespace
+    namespace: nsa1           # Deploys into default namespace
   syncPolicy:
     automated:
       prune: true
